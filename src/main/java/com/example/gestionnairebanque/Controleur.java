@@ -75,7 +75,7 @@ public class Controleur implements Initializable {
 
             // on ajoute la transaction
             gest.addTransaction(new Transaction(nom, type,montant));
-
+            gest.sauvegarderTransactions();
             // on actualise l'affichage
             actualiser();
         }
