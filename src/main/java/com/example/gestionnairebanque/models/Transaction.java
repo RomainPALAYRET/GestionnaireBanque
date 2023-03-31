@@ -25,5 +25,6 @@ public class Transaction implements Serializable {
         if(nom == null) {
             throw new IllegalArgumentException("le nom de la transaction ne doit pas être null");
         }
+
     }
 }

@@ -29,5 +29,12 @@ public class TransactionTest {
         });
     }
 
+    @Test
+    public void testConstructeur3() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Transaction t = new Transaction("", Type.CREDIT, 17.00);
+        });
+    }
+
 
 }
