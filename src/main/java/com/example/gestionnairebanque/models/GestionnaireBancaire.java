@@ -40,6 +40,14 @@ public class GestionnaireBancaire {
         this.listTaux = lireFichierTaux("src/main/resources/Data/taux.txt");
         this.transactions = recupererTransactions("src/main/resources/Data/SaveList.bin");
 
+        for(Transaction transaction: transactions) {
+            if(transaction.getType() == Type.CREDIT) {
+                solde += transaction.getMontant();
+            } else {
+                solde -= transaction.getMontant();
+            }
+        }
+
     }
 
     /**
@@ -119,6 +127,18 @@ public class GestionnaireBancaire {
      */
     public List<Transaction> getTransactions() {
         return transactions;
+    }
+
+    /**
+     * ajoute une nouvelle transaction à la liste transactions
+     */
+    public void addTransaction(Transaction transaction) {
+        transactions.add(transaction);
+        if(transaction.getType() == Type.CREDIT) {
+            solde += transaction.getMontant();
+        } else {
+            solde -= transaction.getMontant();
+        }
     }
 
     /**

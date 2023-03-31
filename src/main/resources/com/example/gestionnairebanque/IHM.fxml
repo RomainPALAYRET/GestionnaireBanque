@@ -50,8 +50,8 @@
             </Label>
             <TextField fx:id="nomField" GridPane.columnIndex="1" />
             <TextField fx:id="montantField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Enregistrer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="DebCredChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#EnregistrerButtonClick" text="Enregistrer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <Label text="Compte" GridPane.columnIndex="1" />
