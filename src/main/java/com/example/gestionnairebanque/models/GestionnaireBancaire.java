@@ -28,6 +28,7 @@ public class GestionnaireBancaire {
      * A la création du compte, le solde est de 0.00€
      */
     public GestionnaireBancaire() {
+        this.solde = 0.00;
     }
 
     /**
