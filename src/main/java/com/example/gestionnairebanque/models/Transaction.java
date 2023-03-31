@@ -5,5 +5,22 @@
  */
 package com.example.gestionnairebanque.models;
 
-public class Transaction {
+import java.io.Serializable;
+
+/**
+ * Une transaction se caractérise par son nom, son type (crédit ou débit) et son montant
+ * @author Romain PALAYRET
+ * @version 1.0.0
+ */
+public class Transaction implements Serializable {
+
+    /**
+     *
+     * @param nom de la transaction
+     * @param type (Type.CREDIT ou Type.DEBIT) de la transaction
+     * @param montant de la transaction
+     */
+    public Transaction(String nom, Type type, double montant) {
+
+    }
 }
