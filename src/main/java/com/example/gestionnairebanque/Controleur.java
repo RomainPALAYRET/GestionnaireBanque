@@ -52,17 +52,37 @@ public class Controleur implements Initializable {
 
     @FXML
     private void EnregistrerButtonClick() {
-        // on récupère les valeurs
-        String nom = nomField.getText();
-        double montant = Double.parseDouble(montantField.getText());
-        Type type = DebCredChoiceBox.getValue();
 
-        // on ajoute la transaction
-        gest.addTransaction(new Transaction(nom, type,montant));
+        boolean erreurSaisie = false;
+        double montant = 0;
+        String nom;
+        Type type;
 
+        // on récupère les valeurs, en vérifiant que les saisies soient corrects
+        type = DebCredChoiceBox.getValue();
+        nom = nomField.getText();
+        if(nom == null|| nom.isEmpty()) {erreurSaisie = true;}
+        try {
+            montant = Double.parseDouble(montantField.getText());
+            if(montant < 0) {
+                erreurSaisie = true;
+            }
+        } catch (Exception e) {
+            erreurSaisie = true;
+        }
 
-        // on actualise l'affichage
-        actualiser();
+        if(!erreurSaisie) {
+
+            // on ajoute la transaction
+            gest.addTransaction(new Transaction(nom, type,montant));
+
+            // on actualise l'affichage
+            actualiser();
+        }
+
+        // on vide les TextField
+        nomField.setText("");
+        montantField.setText("");
 
     }
 
