@@ -9,6 +9,7 @@ import java.io.Serializable;
 
 /**
  * Une transaction se caractérise par son nom, son type (crédit ou débit) et son montant
+ * Cette classe a été développé en TDD
  * @author Romain PALAYRET
  * @version 1.0.0
  */
