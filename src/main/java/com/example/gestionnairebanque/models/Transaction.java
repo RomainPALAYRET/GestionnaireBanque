@@ -24,7 +24,6 @@ public class Transaction implements Serializable {
     double montant;
 
     /**
-     *
      * @param nom de la transaction
      * @param type (Type.CREDIT ou Type.DEBIT) de la transaction
      * @param montant de la transaction
