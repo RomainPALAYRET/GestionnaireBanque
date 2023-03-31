@@ -36,5 +36,11 @@ public class TransactionTest {
         });
     }
 
+    @Test
+    public void testConstructeur4() {
+        Transaction t = new Transaction("T1", Type.CREDIT, 17.00);
+        assertEquals(t.getNom(), "T1");
+    }
+
 
 }
