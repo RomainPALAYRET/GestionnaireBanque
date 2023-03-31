@@ -18,8 +18,10 @@ public class Transaction implements Serializable {
 
 
     String nom;
-
     Type type;
+
+
+    double montant;
 
     /**
      *
@@ -38,6 +40,7 @@ public class Transaction implements Serializable {
 
         this.nom = nom;
         this.type = type;
+        this.montant = montant;
 
     }
 
@@ -55,4 +58,10 @@ public class Transaction implements Serializable {
         return type;
     }
 
+    /**
+     * @return le montant de la transaction
+     */
+    public double getMontant() {
+        return montant;
+    }
 }
