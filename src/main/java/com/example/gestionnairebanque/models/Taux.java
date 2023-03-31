@@ -33,6 +33,10 @@ public class Taux {
             throw new IllegalArgumentException("un taux ne peut pas être négatif");
         }
 
+        if(taux > 1.00) {
+            throw new IllegalArgumentException("un taux ne peut pas être supérieur à 100%");
+        }
+
         this.seuilInf = seuilInf;
         this.seuilSup = seuilSup;
         this.taux = taux;
