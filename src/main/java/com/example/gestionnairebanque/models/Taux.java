@@ -24,6 +24,11 @@ public class Taux {
      * @param taux à appliquer entre les bornes
      */
     public Taux(String nom, double seuilInf, double seuilSup, double taux ) {
+
+        if(seuilInf > seuilSup) {
+            throw new IllegalArgumentException("Le seuilInf doit être plus petit que le seuilSup");
+        }
+
         this.seuilInf = seuilInf;
         this.seuilSup = seuilSup;
         this.taux = taux;

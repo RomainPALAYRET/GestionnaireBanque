@@ -34,7 +34,7 @@ public class Transaction implements Serializable {
         }
 
         if(nom.isEmpty()) {
-            throw new IllegalArgumentException("le nom de la transaction ne doit pas être null");
+            throw new IllegalArgumentException("le nom de la transaction ne doit pas être vide");
         }
 
         this.nom = nom;
