@@ -37,6 +37,10 @@ public class Taux {
             throw new IllegalArgumentException("un taux ne peut pas être supérieur à 100%");
         }
 
+        if(nom.isEmpty()) {
+            throw new IllegalArgumentException("le nom du taux ne doit pas être vide");
+        }
+
         this.seuilInf = seuilInf;
         this.seuilSup = seuilSup;
         this.taux = taux;
