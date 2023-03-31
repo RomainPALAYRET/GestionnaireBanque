@@ -7,6 +7,7 @@ package com.example.gestionnairebanque.models.tests;
 
 
 import com.example.gestionnairebanque.models.GestionnaireBancaire;
+import com.example.gestionnairebanque.models.Taux;
 import com.example.gestionnairebanque.models.Transaction;
 import com.example.gestionnairebanque.models.Type;
 import org.junit.Test;
@@ -55,5 +56,13 @@ public class GestionnaireBancaireTest {
 
         GestionnaireBancaire gest = new GestionnaireBancaire();
         assertEquals(gest.getTransactions().get(0).getNom(), "salaire");
+    }
+
+    @Test
+    public void testConstructeur4() {
+        Exception e = assertThrows(Exception.class, () -> {
+            GestionnaireBancaire gest = new GestionnaireBancaire();
+        });
+        assertEquals(e.getMessage(), "Fichier taux.txt introuvable");
     }
 }
