@@ -22,6 +22,8 @@ public class Transaction implements Serializable {
      * @param montant de la transaction
      */
     public Transaction(String nom, Type type, double montant) {
-
+        if(nom == null) {
+            throw new IllegalArgumentException("le nom de la transaction ne doit pas être null");
+        }
     }
 }
