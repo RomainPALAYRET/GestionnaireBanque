@@ -58,6 +58,9 @@ public class GestionnaireBancaireTest {
         assertEquals(gest.getTransactions().get(0).getNom(), "salaire");
     }
 
+    /**
+     * Veuillez supprimer le fichier Data/taux.txt avant de lancer ce test
+     */
     @Test
     public void testConstructeur4() {
         Exception e = assertThrows(Exception.class, () -> {
