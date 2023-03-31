@@ -42,5 +42,11 @@ public class TransactionTest {
         assertEquals(t.getNom(), "T1");
     }
 
+    @Test
+    public void testConstructeur5() {
+        Transaction t = new Transaction("T1", Type.CREDIT, 17.00);
+        assertEquals(t.getType(), Type.CREDIT);
+    }
+
 
 }
