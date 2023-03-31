@@ -32,7 +32,10 @@ public class GestionnaireBancaire {
      * Récupère la liste des taux depuis le fichier taux.txt
      * A la création du compte, le solde est de 0.00€
      */
-    public GestionnaireBancaire() {
+    public GestionnaireBancaire() throws Exception {
+        if(!(new File("src/main/resources/Data/taux.txt").exists())) {
+            throw new Exception("Fichier taux.txt introuvable");
+        }
         this.solde = 0.00;
         this.listTaux = lireFichierTaux("src/main/resources/Data/taux.txt");
         this.transactions = recupererTransactions("src/main/resources/Data/SaveList.bin");

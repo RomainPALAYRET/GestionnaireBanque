@@ -28,19 +28,19 @@ import static org.junit.Assert.assertThrows;
  */
 public class GestionnaireBancaireTest {
     @Test
-    public void testConstructeur() {
+    public void testConstructeur() throws Exception {
         GestionnaireBancaire gest = new GestionnaireBancaire();
         assertEquals(gest.getSolde(), 0.00, 0.01);
     }
 
     @Test
-    public void testConstructeur2() {
+    public void testConstructeur2() throws Exception {
         GestionnaireBancaire gest = new GestionnaireBancaire();
         assertEquals(gest.getListTaux().get(0).getNom(), "niveau1");
     }
 
     @Test
-    public void testConstructeur3() {
+    public void testConstructeur3() throws Exception {
         List<Transaction> transactions = new ArrayList<Transaction>();
         transactions.add(new Transaction("salaire", Type.CREDIT, 680.00));
         transactions.add(new Transaction("Paypal", Type.DEBIT, 35.56));
