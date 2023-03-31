@@ -15,13 +15,10 @@ import java.io.Serializable;
  */
 public class Transaction implements Serializable {
 
+    private String nom;
+    private Type type;
 
-
-    String nom;
-    Type type;
-
-
-    double montant;
+    private double montant;
 
     /**
      * @param nom de la transaction

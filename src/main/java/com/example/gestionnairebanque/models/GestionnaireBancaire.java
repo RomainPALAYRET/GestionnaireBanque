@@ -18,7 +18,10 @@ import java.util.List;
  */
 public class GestionnaireBancaire {
 
-    List<Transaction> transactions;
+    private List<Transaction> transactions;
+
+
+
     List<Taux> listTaux;
     double solde;
 
@@ -36,6 +39,20 @@ public class GestionnaireBancaire {
      */
     public double getSolde() {
         return solde;
+    }
+
+    /**
+     * @return les transactions éffectuées
+     */
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    /**
+     * @return la liste des taux
+     */
+    public List<Taux> getListTaux() {
+        return listTaux;
     }
 
 }

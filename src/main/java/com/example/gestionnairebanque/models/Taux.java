@@ -12,10 +12,10 @@ package com.example.gestionnairebanque.models;
  * @version 1.0.0
  */
 public class Taux {
-    double seuilInf;
-    double seuilSup;
-    double taux;
-    String nom;
+    private double seuilInf;
+    private double seuilSup;
+    private double taux;
+    private String nom;
 
     /**
      * @param nom du taux

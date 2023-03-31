@@ -23,4 +23,10 @@ public class GestionnaireBancaireTest {
         GestionnaireBancaire gest = new GestionnaireBancaire();
         assertEquals(gest.getSolde(), 0.00, 0.01);
     }
+
+    @Test
+    public void testConstructeur2() {
+        GestionnaireBancaire gest = new GestionnaireBancaire();
+        assertEquals(gest.getListTaux().get(0).getNom(), "niveau1");
+    }
 }
