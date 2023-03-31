@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionnairebanque.Controleur">
   <stylesheets>
     <URL value="@styles/IHM.css" />
   </stylesheets>
@@ -48,8 +48,8 @@
                   <Insets right="5.0" />
                </GridPane.margin>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="nomField" GridPane.columnIndex="1" />
+            <TextField fx:id="montantField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Button mnemonicParsing="false" text="Enregistrer" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
@@ -65,7 +65,7 @@
             <Insets right="5.0" />
          </GridPane.margin>
       </Label>
-      <Label text="97.0" textFill="#108641" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+      <Label fx:id="soldeLabel" text="97.0" textFill="#108641" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets left="10.0" />
          </GridPane.margin>
