@@ -135,6 +135,16 @@ public class GestionnaireBancaire {
     public void addTransaction(Transaction transaction) {
         transactions.add(transaction);
         if(transaction.getType() == Type.CREDIT) {
+            // on applique le taux
+            boolean tauxTrouvee = false;
+            for(Taux taux : listTaux) {
+                if( !tauxTrouvee
+                        && taux.getSeuilInf() >= transaction.getMontant()
+                        && transaction.getMontant() <= taux.getSeuilSup()) {
+                    transaction.setMontant(transaction.getMontant() - (transaction.getMontant() * taux.getTaux()));
+                    tauxTrouvee = true;
+                }
+            }
             solde += transaction.getMontant();
         } else {
             solde -= transaction.getMontant();

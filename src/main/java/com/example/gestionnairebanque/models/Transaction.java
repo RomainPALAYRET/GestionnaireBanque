@@ -62,6 +62,14 @@ public class Transaction implements Serializable {
         return montant;
     }
 
+    /**
+     * @param montant le nouveau montant
+     */
+    public void setMontant(double montant) {
+        this.montant = montant;
+    }
+
+
     @Override
     public String toString() {
         String operateur = "";
