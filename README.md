@@ -19,3 +19,5 @@ Liste des fonctionnalité réalisées :
 
 Liste du reste à faire :
  - Tester l'application des taux lors des crédit. La fonctionnalité est implémentée, mais pas testée
+ - Ajouter le montant réel du crédit dans son nom
+ - Ajouter une exception si le montant du crédit ne correspond à aucun taux
