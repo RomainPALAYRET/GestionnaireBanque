@@ -19,6 +19,8 @@ public class Transaction implements Serializable {
 
     String nom;
 
+    Type type;
+
     /**
      *
      * @param nom de la transaction
@@ -35,10 +37,22 @@ public class Transaction implements Serializable {
         }
 
         this.nom = nom;
+        this.type = type;
 
     }
 
+    /**
+     * @return le nom de la transaction
+     */
     public String getNom() {
         return nom;
     }
+
+    /**
+     * @return le type de la transaction (Credit ou Debit)
+     */
+    public Type getType() {
+        return type;
+    }
+
 }
