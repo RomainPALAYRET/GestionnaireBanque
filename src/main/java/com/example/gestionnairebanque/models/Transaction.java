@@ -20,6 +20,7 @@ public class Transaction implements Serializable {
 
     private double montant;
 
+
     /**
      * @param nom de la transaction
      * @param type (Type.CREDIT ou Type.DEBIT) de la transaction
@@ -60,4 +61,14 @@ public class Transaction implements Serializable {
     public double getMontant() {
         return montant;
     }
+
+    @Override
+    public String toString() {
+        String operateur = "";
+        if(this.getType() == Type.DEBIT) {
+            operateur = "-";
+        }
+        return this.nom + " " + operateur + String.format("%.2f", this.montant);
+    }
+
 }
