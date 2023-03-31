@@ -38,4 +38,11 @@ public class TauxTest {
             Taux t = new Taux("TVA", 20, 30, 1.2);
         });
     }
+
+    @Test
+    public void testConstructeur4() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Taux t = new Taux("", 20, 30, 0.05);
+        });
+    }
 }
