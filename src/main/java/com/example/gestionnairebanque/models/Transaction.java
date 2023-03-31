@@ -15,6 +15,10 @@ import java.io.Serializable;
  */
 public class Transaction implements Serializable {
 
+
+
+    String nom;
+
     /**
      *
      * @param nom de la transaction
@@ -30,5 +34,11 @@ public class Transaction implements Serializable {
             throw new IllegalArgumentException("le nom de la transaction ne doit pas être null");
         }
 
+        this.nom = nom;
+
+    }
+
+    public String getNom() {
+        return nom;
     }
 }
